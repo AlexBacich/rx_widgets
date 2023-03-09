@@ -39,7 +39,7 @@ class RxSpinner extends StatelessWidget {
       this.backgroundColor,
       this.value,
       this.valueColor,
-      this.strokeWidth: 4.0,
+      this.strokeWidth = 4.0,
       this.normal,
       Key? key})
       : super(key: key);
@@ -111,7 +111,7 @@ class RxLoader<R> extends StatefulWidget {
     this.backgroundColor,
     this.value,
     this.valueColor,
-    this.strokeWidth: 4.0,
+    this.strokeWidth = 4.0,
     this.dataBuilder,
     this.placeHolderBuilder,
     this.errorBuilder,
