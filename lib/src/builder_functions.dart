@@ -15,3 +15,5 @@ typedef RxWidget5<T1, T2, T3, T4, T5> = Widget Function(
     T1 data1, T2 data2, T3 data3, T4 data4, T5 data5);
 typedef RxWidget6<T1, T2, T3, T4, T5, T6> = Widget Function(
     T1 data1, T2 data2, T3 data3, T4 data4, T5 data5, T6 data6);
+typedef RxWidget7<T1, T2, T3, T4, T5, T6, T7> = Widget Function(
+    T1 data1, T2 data2, T3 data3, T4 data4, T5 data5, T6 data6, T7 data7);

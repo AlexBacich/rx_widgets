@@ -1,6 +1,9 @@
 ## Release Date
 * 3.03.2023
 
+## [4.2.1] - 3.03.2023
+- Minor fixes to ReactiveWidgetX
+
 ## [4.2.0] - 3.03.2023
 - Added ReactiveWidget2 - ReactiveWidget6. Allowing to wrap cascading reactive widgets. 
 
