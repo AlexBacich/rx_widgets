@@ -54,15 +54,14 @@ class RxText extends ReactiveBaseWidget<String> {
   /// How visual overflow should be handled.
   final TextOverflow? overflow;
 
-  /// The number of font pixels for each logical pixel.
+  /// The text scaling strategy to use for this text.
   ///
-  /// For example, if the text scale factor is 1.5, text will be 50% larger than
-  /// the specified font size.
+  /// Controls how large the text will be rendered. This affects both the font size
+  /// and the amount of space occupied by the text.
   ///
-  /// The value given to the constructor as textScaleFactor. If null, will
-  /// use the [MediaQueryData.textScaleFactor] obtained from the ambient
-  /// [MediaQuery], or 1.0 if there is no [MediaQuery] in scope.
-  final double? textScaleFactor;
+  /// If null, will use the [MediaQueryData.textScaler] obtained from the ambient
+  /// [MediaQuery], or [TextScaler.noScaling] if there is no [MediaQuery] in scope.
+  final TextScaler? textScaler;
 
   /// An optional maximum number of lines for the text to span, wrapping if necessary.
   /// If the text exceeds the given number of lines, it will be truncated according
@@ -103,7 +102,7 @@ class RxText extends ReactiveBaseWidget<String> {
     this.locale,
     this.softWrap,
     this.overflow,
-    this.textScaleFactor,
+    this.textScaler,
     this.maxLines,
     this.semanticsLabel,
   }) : super(
@@ -125,7 +124,7 @@ class RxText extends ReactiveBaseWidget<String> {
       style: this.style,
       textAlign: this.textAlign,
       textDirection: this.textDirection,
-      textScaleFactor: this.textScaleFactor,
+      textScaler: this.textScaler,
     );
   }
 

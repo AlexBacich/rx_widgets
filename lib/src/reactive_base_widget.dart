@@ -8,7 +8,6 @@ abstract class ReactiveBaseWidget<T> extends StatefulWidget {
   final Stream<T> stream;
   final T? initialData;
 
-  @mustCallSuper
   const ReactiveBaseWidget(this.stream, this.initialData, {Key? key})
       : super(key: key);
 

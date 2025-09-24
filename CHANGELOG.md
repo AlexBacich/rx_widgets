@@ -1,5 +1,9 @@
 ## Release Date
-* 3.03.2023
+* 24.09.2025
+
+## [4.3.0] - 24.09.2025
+- Added ReactiveWidget8 and ReactiveWidget9 for handling 8 and 9 reactive streams respectively
+- Updated supported Dart version to 3.9.0
 
 ## [4.2.1] - 3.03.2023
 - Minor fixes to ReactiveWidgetX

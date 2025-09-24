@@ -350,3 +350,159 @@ class ReactiveWidget7<T1, T2, T3, T4, T5, T6, T7> extends StatelessWidget {
     );
   }
 }
+
+class ReactiveWidget8<T1, T2, T3, T4, T5, T6, T7, T8> extends StatelessWidget {
+  const ReactiveWidget8({
+    super.key,
+    required this.stream1,
+    required this.stream2,
+    required this.stream3,
+    required this.stream4,
+    required this.stream5,
+    required this.stream6,
+    required this.stream7,
+    required this.stream8,
+    this.initialData1,
+    this.initialData2,
+    this.initialData3,
+    this.initialData4,
+    this.initialData5,
+    this.initialData6,
+    this.initialData7,
+    this.initialData8,
+    required this.widget,
+    this.placeHolderWidget,
+    this.errorWidget,
+  });
+
+  final Stream<T1> stream1;
+  final Stream<T2> stream2;
+  final Stream<T3> stream3;
+  final Stream<T4> stream4;
+  final Stream<T5> stream5;
+  final Stream<T6> stream6;
+  final Stream<T7> stream7;
+  final Stream<T8> stream8;
+  final T1? initialData1;
+  final T2? initialData2;
+  final T3? initialData3;
+  final T4? initialData4;
+  final T5? initialData5;
+  final T6? initialData6;
+  final T7? initialData7;
+  final T8? initialData8;
+  final RxWidget8<T1, T2, T3, T4, T5, T6, T7, T8> widget;
+  final RxErrorWidget? errorWidget;
+  final Widget? placeHolderWidget;
+
+  @override
+  Widget build(BuildContext context) {
+    return ReactiveWidget7(
+      stream1: stream1,
+      stream2: stream2,
+      stream3: stream3,
+      stream4: stream4,
+      stream5: stream5,
+      stream6: stream6,
+      stream7: stream7,
+      initialData1: initialData1,
+      initialData2: initialData2,
+      initialData3: initialData3,
+      initialData4: initialData4,
+      initialData5: initialData5,
+      initialData6: initialData6,
+      initialData7: initialData7,
+      placeHolderWidget: placeHolderWidget,
+      errorWidget: errorWidget,
+      widget: (data1, data2, data3, data4, data5, data6, data7) => ReactiveWidget<T8>(
+        stream: stream8,
+        initialData: initialData8,
+        placeHolderWidget: placeHolderWidget,
+        errorWidget: errorWidget,
+        widget: (data8) =>
+            widget(data1, data2, data3, data4, data5, data6, data7, data8),
+      ),
+    );
+  }
+}
+
+class ReactiveWidget9<T1, T2, T3, T4, T5, T6, T7, T8, T9> extends StatelessWidget {
+  const ReactiveWidget9({
+    super.key,
+    required this.stream1,
+    required this.stream2,
+    required this.stream3,
+    required this.stream4,
+    required this.stream5,
+    required this.stream6,
+    required this.stream7,
+    required this.stream8,
+    required this.stream9,
+    this.initialData1,
+    this.initialData2,
+    this.initialData3,
+    this.initialData4,
+    this.initialData5,
+    this.initialData6,
+    this.initialData7,
+    this.initialData8,
+    this.initialData9,
+    required this.widget,
+    this.placeHolderWidget,
+    this.errorWidget,
+  });
+
+  final Stream<T1> stream1;
+  final Stream<T2> stream2;
+  final Stream<T3> stream3;
+  final Stream<T4> stream4;
+  final Stream<T5> stream5;
+  final Stream<T6> stream6;
+  final Stream<T7> stream7;
+  final Stream<T8> stream8;
+  final Stream<T9> stream9;
+  final T1? initialData1;
+  final T2? initialData2;
+  final T3? initialData3;
+  final T4? initialData4;
+  final T5? initialData5;
+  final T6? initialData6;
+  final T7? initialData7;
+  final T8? initialData8;
+  final T9? initialData9;
+  final RxWidget9<T1, T2, T3, T4, T5, T6, T7, T8, T9> widget;
+  final RxErrorWidget? errorWidget;
+  final Widget? placeHolderWidget;
+
+  @override
+  Widget build(BuildContext context) {
+    return ReactiveWidget8(
+      stream1: stream1,
+      stream2: stream2,
+      stream3: stream3,
+      stream4: stream4,
+      stream5: stream5,
+      stream6: stream6,
+      stream7: stream7,
+      stream8: stream8,
+      initialData1: initialData1,
+      initialData2: initialData2,
+      initialData3: initialData3,
+      initialData4: initialData4,
+      initialData5: initialData5,
+      initialData6: initialData6,
+      initialData7: initialData7,
+      initialData8: initialData8,
+      placeHolderWidget: placeHolderWidget,
+      errorWidget: errorWidget,
+      widget: (data1, data2, data3, data4, data5, data6, data7, data8) => ReactiveWidget<T9>(
+        stream: stream9,
+        initialData: initialData9,
+        placeHolderWidget: placeHolderWidget,
+        errorWidget: errorWidget,
+        widget: (data9) =>
+            widget(data1, data2, data3, data4, data5, data6, data7, data8, data9),
+      ),
+    );
+  }
+}

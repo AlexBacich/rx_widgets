@@ -25,6 +25,7 @@ Add to your `pubspec.yaml` dependencies to  `rx_widgets`
 - [RxCommandBuilder](#rxcommandbuilder)
 - [ReactiveBuilder](#reactivebuilder)
 - [ReactiveWidget](#reactivewidget)
+- [ReactiveWidget2-ReactiveWidget9](#reactivewidget2-reactivewidget9)
 - [RxCommandHandlerMixin](#rxcommandhandlermixin)
 
 ### RxElevatedButton
@@ -66,7 +67,7 @@ A `Text` that takes in a `Stream<String>` and displays it. An example of usage c
     this.locale,
     this.softWrap,
     this.overflow,
-    this.textScaleFactor,
+    this.textScaler,
     this.maxLines,
     this.semanticsLabel,
   });
@@ -319,8 +320,38 @@ class Example extends StatelessWidget {
 }
 ```
 
+### ReactiveWidget2-ReactiveWidget9
 
-### RxCommandHandlerMixin 
+Extended versions of ReactiveWidget that can handle multiple streams simultaneously. Available variants:
+- **ReactiveWidget2** - handles 2 streams
+- **ReactiveWidget3** - handles 3 streams
+- **ReactiveWidget4** - handles 4 streams
+- **ReactiveWidget5** - handles 5 streams
+- **ReactiveWidget6** - handles 6 streams
+- **ReactiveWidget7** - handles 7 streams
+- **ReactiveWidget8** - handles 8 streams
+- **ReactiveWidget9** - handles 9 streams
+
+Each variant takes multiple streams as input and provides all the stream data to the widget builder function.
+
+#### ReactiveWidget3 Example
+```dart
+ReactiveWidget3<String, int, bool>(
+  stream1: nameStream,
+  stream2: ageStream,
+  stream3: isActiveStream,
+  widget: (name, age, isActive) {
+    return ListTile(
+      title: Text(name),
+      subtitle: Text("Age: $age"),
+      trailing: isActive ? Icon(Icons.check) : null,
+    );
+  },
+)
+```
+
+
+### RxCommandHandlerMixin
 
 Adds ability to listen om RxCommand events inside Stateless and Stateful Widgets.
 

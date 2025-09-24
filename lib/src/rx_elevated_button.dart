@@ -26,7 +26,7 @@ class RxElevatedButton extends StatelessWidget {
   final ButtonStyle? style;
   final FocusNode? focusNode;
   final bool autofocus;
-  final MaterialStatesController? statesController;
+  final WidgetStatesController? statesController;
 
   @override
   Widget build(BuildContext context) {
